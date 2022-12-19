@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Material Icons' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+    <form class="" action="">
+      <div class="head">
+        <img src="googlelogo.png" alt="" class="logo">
+        <h3>Create your Google Account</h3>
+      </div>
+      <div class="name">
+        <input type="name" required>
+        <label>First name </label>
+      </div>
+      <div class="name">
+        <input type="name" required>
+        <label>Last name </label>
+      </div>
+      <div class="user-name">
+        <input type="username" required>
+        <label>Username </label>
+        <span class="gmail">@gmail.com</span>
+      </div>
+      <a class="line1">You can use letters, numbers & periods</a>
+      <a href="" class="line2">Use my current email address instead</a>
+      <div class="pass">
+        <input type="password" class="password" id="pass1" required>
+        <label>Password </label>
+      </div>
+      <div class="pass">
+        <input type="password" class="password" id="pass2" required>
+        <label>Confirm </label>
+        </div>
+        <div class="iconeye">
+      <img src="eyehide.png" onclick="show();" id="eye">
+      </div>
+      <a class="line3">Use 8 or more characters with a mix of letters, numbers & symbols</a>
+      <a href="" class="line4">Sign in instead</a>
+      <input type="submit" value="Next">
+    </form>
+    <div class="side-image">
+      <img src="sideimage.png" alt="" class="side-logo">
+    </div>
+    </div>
+
+    <script type="text/javascript">
+
+    function show(){
+
+      var password= document.getElementById('pass1');
+      confirm= document.getElementById('pass2');
+      image= document.getElementById('eye');
+
+      if (password.type==="password",confirm.type==="password") {
+        password.type="text";
+        confirm.type="text";
+        image.setAttribute('src', 'eyeshow.png');
+
+      }else if (password.type==="text",confirm.type==="text"){
+        password.type="password";
+        confirm.type="password";
+        image.setAttribute('src', 'eyehide.png');
+      }
+    }
+
+    </script>
+  </body>
+</html>
